@@ -3,8 +3,12 @@
 *.bak
 *~
 
+
 # compiled
 *.o
-bin
-build
-files
+bin/*
+build/*
+files/*
+
+# keep gitkeep files
+!.gitkeep
