@@ -9,3 +9,6 @@ all: $(BIN)
 
 ./bin/%: ./src/%.c
 	$(CC) $(CFLAGS) $^ -o $@
+
+clean:
+	rm -v ./bin/*
