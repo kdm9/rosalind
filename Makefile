@@ -1,10 +1,11 @@
 # More structured C project, with src, include and build dirs
 CC=gcc
-CFLAGS=-g -O3 -I.
-OBJ=$(patsubst %.c,./obj/%.o,$(SRCS))
-PROG=<+PROG+>
-all: obj
-	$(CC) $(CFLAGS) $(OBJ) -o ./bin/$(PROG)
+CFLAGS=-g -O3 -I ./include -lz
 
-%.o : %.c
-	$(CC) $(CFLAGS)
+SRCS := $(wildcard ./src/*.c)
+BIN := $(patsubst ./src/%.c,./bin/%, $(SRCS))
+
+all: $(BIN)
+
+./bin/%: ./src/%.c
+	$(CC) $(CFLAGS) $^ -o $@
