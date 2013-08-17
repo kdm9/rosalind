@@ -17,21 +17,7 @@ int main(int argc, char *argv[]) {
 
 	fgets(seq, 1000, fh);
 
-	int seqlen = strlen(seq);
-	if (seq[seqlen - 1] == '\n') {
-		seq[seqlen - 1] = '\0';
-		seqlen = strlen(seq);
-	}
-
-	int iii = 0;
-	for (iii; iii < seqlen; iii++) {
-		int outpos = seqlen - iii - 1;
-		if (seq[iii] == 'a' || seq[iii] == 'A') outseq[outpos] = 'T';
-		if (seq[iii] == 'c' || seq[iii] == 'C') outseq[outpos] = 'G';
-		if (seq[iii] == 'g' || seq[iii] == 'G') outseq[outpos] = 'C';
-		if (seq[iii] == 't' || seq[iii] == 'T') outseq[outpos] = 'A';
-		/*printf("seq at %i %c, out %i %c\n", iii, seq[iii], outpos, outseq[outpos]);*/
-	}
+	revcomp(&outseq, seq);
 
 	printf("seq is %s\n", seq);
 	printf("seq is now %s\n", outseq);
