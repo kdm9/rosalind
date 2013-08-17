@@ -1,34 +1,8 @@
-/*
- * =====================================================================================
- *
- *       Filename:  001_counting_dna_nucleotides.c
- *
- *    Description:  
- *
- *        Version:  1.0
- *        Created:  09/08/13 22:01:20
- *       Revision:  none
- *       Compiler:  gcc
- *
- *         Author:  YOUR NAME (), 
- *   Organization:  
- *
- * =====================================================================================
- */
 #include <stdlib.h>
 #include <stdio.h>
-
 #include <string.h>
 
-/* 
- * ===  FUNCTION  ======================================================================
- *         Name:  main
- *  Description:  count each nt from argv[1]
- * =====================================================================================
- */
-int
-main ( int argc, char *argv[] )
-{
+int main(int argc, char *argv[]) {
 	if (argc != 3) { printf("dna2rna <in_file> <out_file>\n"); exit(EXIT_FAILURE);}
 
 	FILE *fh = fopen(argv[1], "r");
@@ -50,4 +24,4 @@ main ( int argc, char *argv[] )
 	fclose(ofh);
 
 	return EXIT_SUCCESS;
-}				/* ----------  end of function main  ---------- */
+}

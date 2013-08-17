@@ -3,12 +3,10 @@
 #include <stdio.h>
 #include <stdint.h>
 
-
 #include <gmp.h>
 
-int
-main ( int argc, char *argv[] )
-{
+
+int main(int argc, char *argv[]) {
 	if (argc != 3) {fprintf(stderr, "USAGE: FIB n k\n"); exit(EXIT_FAILURE);}
 
 	int n, k;

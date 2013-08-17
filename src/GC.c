@@ -1,6 +1,6 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
+#include <stdio.h>
 
 #include <zlib.h>
 
@@ -9,9 +9,7 @@
 KSEQ_INIT(gzFile, gzread);
 
 
-int
-main ( int argc, char *argv[] )
-{
+int main(int argc, char *argv[]) {
 	gzFile infh;
 	kseq_t *seq;
 

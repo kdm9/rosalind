@@ -1,11 +1,12 @@
 #include <stdlib.h>
-#include <stdio.h>
 #include <string.h>
+#include <stdio.h>
 
 
-int
-main ( int argc, char *argv[] )
-{
+#include "kmlib.h"
+
+
+int main(int argc, char *argv[]) {
 	if (argc != 3) { printf("REVC <in_file> <out_file>\n"); exit(EXIT_FAILURE);}
 
 	FILE *fh = fopen(argv[1], "r");
@@ -39,4 +40,4 @@ main ( int argc, char *argv[] )
 	fclose(fh);
 	fclose(ofh);
 	return EXIT_SUCCESS;
-}				/* ----------  end of function main  ---------- */
+}
