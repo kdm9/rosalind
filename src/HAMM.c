@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 	char *seq1 = argv[1];
 	char *seq2 = argv[2];
 
-	ham = calc_hamming(seq1, seq2);
+	ham = hamming(seq1, seq2);
 	printf("%i\n", ham);
 
 	return EXIT_SUCCESS;

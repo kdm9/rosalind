@@ -10,7 +10,8 @@ int main(int argc, char *argv[]) {
 
 	char seq[1001];
 
-	size_t seqlen = fgets(seq, 1000, fh);
+    fgets(seq, 1000, fh);
+	size_t seqlen = strlen(seq); 
 
 	size_t iii = 0;
 	for (iii; iii <  strlen(seq); iii++) {
