@@ -13,11 +13,11 @@ int main(int argc, char *argv[]) {
 	FILE *ofh = fopen(argv[2], "w");
 
 	char seq[1001];
-	char outseq[1001];
+	char *outseq = NULL;
 
 	fgets(seq, 1000, fh);
 
-	revcomp(&outseq, seq);
+	outseq = revcomp(seq, 1000);
 
 	printf("seq is %s\n", seq);
 	printf("seq is now %s\n", outseq);
@@ -25,5 +25,6 @@ int main(int argc, char *argv[]) {
 	fputs(outseq, ofh);
 	fclose(fh);
 	fclose(ofh);
+    free(outseq);
 	return EXIT_SUCCESS;
 }
