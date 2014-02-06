@@ -1,3 +1,6 @@
 [submodule "kmlib"]
 	path = kmlib
 	url = git@github.com:kdmurray91/kmlib.git
+[submodule "klib"]
+	path = klib
+	url = http://github.com/attractivechaos/klib.git
